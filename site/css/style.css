@@ -3,15 +3,15 @@ html, body {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-dark1);
-    color: var(--color-second)
+    color: var(--color-second);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header, .navigation_header {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     z-index: 3;
 }
 
@@ -28,18 +28,18 @@ body {
 }
 
 .navigation_header a {
-    text-decoration: none;
     color: var(--color-purple);
-    transition: 1s;
     font-weight: bold;
+    text-decoration: none;
+    transition: 1s;
 }
 
 .btn_icon_header {
-    display: none;
     background-color: transparent;
     border: none;
     color: var(--color-second);
     cursor: pointer;
+    display: none;
 }
 
 @media screen and (max-width: 820px) {
@@ -49,24 +49,24 @@ body {
     }
 
     .navigation_header {
-        position: absolute;
-        flex-direction: column;
-        top: 0;
-        background-color: var(--color-dark5);
-        height: 150%;
-        width: 50vw;
         animation-duration: 1s;
-        margin-left: -100vw;
+        background-color: var(--color-dark5);
+        flex-direction: column;
         gap: 0;
+        height: 150%;
+        margin-left: -100vw;
+        position: absolute;
+        top: 0;
+        width: 50vw;
     }
 
     .itens_header {
-        display: flex;
-        padding: 8vw 0;
-        width: 100%;
-        justify-content: center;
         align-items: center;
         border-bottom: 2px solid var(--color-dark1);
+        display: flex;
+        justify-content: center;
+        padding: 8vw 0;
+        width: 100%;
     }
 
     .itens_header:hover {
@@ -91,13 +91,13 @@ body {
 
 .active {
     background-color: var(--color-dark3);
-    padding: 10px;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .logo {
-    display: flex;
     align-items: center;
+    display: flex;
     padding-left: 50px;
 }
 
@@ -107,9 +107,9 @@ body {
 
 :root {
     --color-dark1: #272727;
-    --color-dark2: #2d2d2d;
+    --color-dark2: #363636;
     --color-dark3: #414141;
-    --color-dark4: #1c1c1c;
+    --color-dark4: #2b2b2b;
     --color-dark5: #343434;
     --color-second: rgb(211, 211, 211);
 }
@@ -121,32 +121,39 @@ body {
     box-sizing: border-box;
 }
 
-.content {
-    text-align: center;
-    height: 100vh;
-    transition: 1s;
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #1f2029;
 }
 
 .wrapper {
-    height: 100%;
+    top: px;
     display: flex;
+    align-items: center;
+    width: 100vw;
 }
 
 .slide-wrapper {
-    top: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     overflow: hidden;
+    width: 100vw;
 }
 
 .slide-list {
+    width: 100vw;
     display: flex;
 }
 
 .slide-item {
-    padding: 0px 10px;
-    width: 90vw;
+    cursor: grab;
+    flex-shrink: 0;
+    padding: 0 10px;
+    width: 100vw;
 }
 
 .slide-content {
@@ -158,52 +165,92 @@ body {
 }
 
 .slide-description {
-    color: (var(--color-second));
+    color: #fff;
     position: absolute;
+    padding: 30px;
     bottom: 0;
     width: 100%;
-    text-align: start;
-    margin-bottom: 20%;
-    margin-left: 7%;
+    margin-bottom: 18%;
+    margin-left: 6%;
 }
 
-.slide-description h1 {
-    font-family: "Playfair Display", Georgia, serif;
+.slide-description h3 {
+    font-family: 'Koulen', sans-serif;
     font-size: 48px;
+    position: relative;
+    top: 16px
 }
 
 .slide-description p {
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 24px;
 }
 
 .slide-nav-button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 36px;
     position: absolute;
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    margin-bottom: 40px;
     z-index: 1;
 }
 
-.slide-nav-left {
-    left: 10px;
+.slide-nav-previous {
+    left: 20px;
 }
 
-.slide-nav-right {
-    right: 10px;
+.slide-nav-next {
+    right: 20px;
 }
 
 .slide-controls {
-    margin: 10px auto;
+    margin: 30px auto 0;
 }
 
-.slide-control-button{
-    background-color: transparent;
-    width: 25px;
+.slide-control-button {
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    font-size: 18px;
     margin: 0 5px;
 }
 
 .slide-control-button.active {
-    fill: black;
+    color: var(--color-dark3);
 }
 
+@media screen and (max-width: 768px) {
+    .slide-description {
+        padding: 10px;
+    }
+    
+    .slide-description h3 {
+        font-size: 24px;
+        top: 0;
+    }
+
+    .slide-description p {
+        display: none;
+    }
+
+    .slide-nav-button {
+        margin-top: -20px;
+        font-size: 28px;
+    }
+    
+    .slide-nav-previous {
+        left: 10px;
+    }
+    
+    .slide-nav-next {
+        right: 10px;
+    }
+
+    .slide-controls {
+        margin: 15px auto 0;
+    }
+
+    .slide-control-button {
+        font-size: 14px;
+    }
+}

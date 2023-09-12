@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Projeto</title>
 </head>
@@ -29,58 +33,54 @@
 
     <div tabindex="0" onclick="closeSidebar()" class="content" id="content">
         <div class="wrapper">
-            <div class="slide-wrapper">
-                <button class="slide-nav-button slide-nav-left"><img src="img/icons/arrow-left.svg" alt="">
-                </button>
-                <button class="slide-nav-button slide-nav-right"><img src="img/icons/arrow-right.svg" alt=""></button>
-                <div class="slide-list">
-                    <div class="slided-item">
+            <div class="slide-wrapper" data-slide="wrapper">
+                <button class="slide-nav-button slide-nav-previous fas fa-chevron-left"
+                    data-slide="nav-previous-button"></button>
+                <button class="slide-nav-button slide-nav-next fas fa-chevron-right"
+                    data-slide="nav-next-button"></button>
+                <div class="slide-list" data-slide="list">
+                    <div class="slide-item" data-slide="item" data-index="0">
                         <div class="slide-content">
-                            <img src="img/img_slide1.jpg" class="slide-image;" alt="Slide 1">
+                            <img class="slide-image" src="img/img_slide1.jpg" alt="Assassin's Creed" />
                             <div class="slide-description">
-                                <h1>Slide 1</h1>
-                                <p>Lorem ipsum, dolor sit amet
-                                </p>
-                                <p> consectetur adipisicing elit.</p>
+                                <h3>Assassin's Creed</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
                             </div>
                         </div>
                     </div>
-                    <div class="slided-item">
+                    <div class="slide-item" data-slide="item" data-index="1">
                         <div class="slide-content">
-                            <img src="img/img_slide2.jpg" class="slide-image;" alt="Slide 2">
+                            <img class="slide-image" src="img/img_slide2.jpg" alt="Fortnite" />
                             <div class="slide-description">
-                                <h1>Slide 2</h1>
-                                <p>Lorem ipsum, dolor sit amet </p>
-                                <p> consectetur adipisicing elit.</p>
+                                <h3>Fortnite</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
                             </div>
                         </div>
                     </div>
-                    <div class="slided-item">
+                    <div class="slide-item" data-slide="item" data-index="2">
                         <div class="slide-content">
-                            <img src="img/img_slide3.jpg" class="slide-image;" alt="Slide 3">
+                            <img class="slide-image" src="img/img_slide3.jpg" alt="Freefire" />
                             <div class="slide-description">
-                                <h1>Slide 3</h1>
-                                <p>Lorem ipsum, dolor sit amet
-                                <p> consectetur adipisicing elit.</p>
+                                <h3>Freefire</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slide-controls">
-                    <button class="slide-control-button active">
-                        <img src="img/icons/circle.svg" alt="">
-                    </button>
-                    <button class="slide-control-button active">
-                        <img src="img/icons/circle.svg" alt="">
-                    </button>
-                    <button class="slide-control-button active">
-                        <img src="img/icons/circle.svg" alt="">
-                    </button>
+                <div class="slide-controls" data-slide="controls-wrapper">
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script src="js/menu.js"></script>
+<script src="js/slides.js"></script>
+<script>
+    initSlider({
+        autoPlay: true,
+        startAtIndex: 0,
+        timeInterval: 2000
+    })
+</script>
 
 </html>
