@@ -18,9 +18,11 @@ body {
 .header {
     background-color: var(--color-dark2);
     box-shadow: 0px 0px 10px var(--color-dark4);
-    height: 5em;
+    height: 6vw;
+    min-height: 65px;
     justify-content: space-between;
     padding: 0 10%;
+    width: 100vw;
 }
 
 .navigation_header {
@@ -102,7 +104,9 @@ body {
 }
 
 .img_logo_header {
-    width: 45px;
+    width: 2vw;
+    min-width: 35px;
+    filter: invert();
 }
 
 :root {
@@ -111,7 +115,7 @@ body {
     --color-dark3: #414141;
     --color-dark4: #2b2b2b;
     --color-dark5: #343434;
-    --color-second: rgb(211, 211, 211);
+    --color-second: rgb(228, 228, 228);
 }
 
 *, *::before, *::after {
@@ -123,10 +127,6 @@ body {
 
 html, body {
     height: 100%;
-}
-
-body {
-    background-color: #1f2029;
 }
 
 .wrapper {
@@ -152,38 +152,37 @@ body {
 .slide-item {
     cursor: grab;
     flex-shrink: 0;
-    padding: 0 10px;
-    width: 100vw;
+    width: 100%;
 }
 
 .slide-content {
+    width: 100%;
     position: relative;
 }
 
 .slide-image {
     width: 100%;
+    height: 45vw;
 }
 
 .slide-description {
     color: #fff;
     position: absolute;
-    padding: 30px;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 18%;
-    margin-left: 6%;
+    bottom: 35%;
+    margin-left: 8%;
+    width: 45%;
 }
 
 .slide-description h3 {
-    font-family: 'Koulen', sans-serif;
-    font-size: 48px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 52px;
     position: relative;
-    top: 16px
 }
 
 .slide-description p {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 24px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 27px;
+    word-wrap: break-word;
 }
 
 .slide-nav-button {
@@ -204,53 +203,75 @@ body {
 }
 
 .slide-controls {
-    margin: 30px auto 0;
+    position: absolute;
+    top: 103%;
+    /* Ajuste a posição vertical conforme necessário */
+    z-index: 10;
+    left: 45%;
+    right: 45%;
+    /* Centralize verticalmente */
 }
 
 .slide-control-button {
-    color: #fff;
-    cursor: pointer;
     background: transparent;
-    font-size: 18px;
-    margin: 0 5px;
+    bottom: -90px;
+    color: var(--color-second);
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px;
 }
 
-.slide-control-button.active {
+.active {
+    font-size: 22px;
     color: var(--color-dark3);
 }
 
 @media screen and (max-width: 768px) {
-    .slide-description {
-        padding: 10px;
+    .slide-controls {
+        top: 103%;
+        left: 35%;
+        right: 30%;
     }
-    
+
+    .slide-description {
+        padding: 30px;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 0%;
+        margin-left: 6%;
+    }
+
     .slide-description h3 {
-        font-size: 24px;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 22px;
         top: 0;
     }
 
     .slide-description p {
-        display: none;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 10px;
+        max-width: 200px;
+        /* Defina o valor máximo que você deseja */
+        word-wrap: break-word;
     }
 
     .slide-nav-button {
-        margin-top: -20px;
-        font-size: 28px;
-    }
-    
-    .slide-nav-previous {
-        left: 10px;
-    }
-    
-    .slide-nav-next {
-        right: 10px;
+        display: none;
     }
 
     .slide-controls {
-        margin: 15px auto 0;
+        margin: 0px auto;
     }
 
     .slide-control-button {
-        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        background: transparent;
+        font-size: 10px;
+        margin: 0 2px;
+    }
+
+    .slide-control-button.active {
+        color: var(--color-dark3);
     }
 }
