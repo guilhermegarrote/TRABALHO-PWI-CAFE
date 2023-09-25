@@ -40,7 +40,6 @@ function setVisibleSlide({ index, animate }) {
     const position = getCenterPosition({ index })
     state.currentSlideIndex = index
     slideList.style.transition = animate === true ? 'transform .5s' : 'none'
-    activeControlButton({ index })
     translateSlide({position: position})
 }
 
@@ -52,26 +51,6 @@ function previousSlide() {
     setVisibleSlide({ index: state.currentSlideIndex - 1, animate: true})
 }
 
-function createControlButtons() {
-    slideItems.forEach(function(){
-        const controlButton = document.createElement('button')
-        controlButton.classList.add('slide-control-button')
-        controlButton.classList.add('fas')
-        controlButton.classList.add('fa-circle')
-        controlButton.dataset.slide = 'control-button'
-        controlsWrapper.append(controlButton)
-    })
-}
-
-function activeControlButton({ index }) {
-    const slideItem = slideItems[index]
-    const dataIndex = Number(slideItem.dataset.index)
-    const controlButton = controlButtons[dataIndex]
-    controlButtons.forEach(function(controlButtonItem) {
-        controlButtonItem.classList.remove('active')
-    })
-    if(controlButton) controlButton.classList.add('active')
-}
 
 function createSlideClones() {
     const firstSlide = slideItems[0].cloneNode(true)
@@ -145,10 +124,6 @@ function onTouchEnd(event) {
     slideItem.removeEventListener('touchmove', onTouchMove)
 }
 
-function onControlButtonClick(index) {
-    setVisibleSlide({ index: index + 2, animate: true })
-}
-
 function onSlideListTransitionEnd() {
     const slideItem = slideItems[state.currentSlideIndex]
     
@@ -169,13 +144,6 @@ function setAutoPlay() {
 }
 
 function setListeners() {
-    controlButtons = document.querySelectorAll('[data-slide="control-button"]')
-    controlButtons.forEach(function(controlButton, index) {
-        controlButton.addEventListener('click', function(event) {
-            onControlButtonClick(index)
-        })
-    })
-
     slideItems.forEach(function(slideItem, index) {
         slideItem.addEventListener('dragstart', function(event) {
             event.preventDefault()
@@ -210,7 +178,6 @@ function setListeners() {
 function initSlider({startAtIndex = 0, autoPlay = true, timeInterval = 3000}) {
     state.autoPlay = autoPlay
     state.timeInterval = timeInterval
-    createControlButtons()
     createSlideClones()
     setListeners()
     setVisibleSlide({ index: startAtIndex + 2, animate: true })

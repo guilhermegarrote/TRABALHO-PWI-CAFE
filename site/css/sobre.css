@@ -1,0 +1,142 @@
+/* Estilos para elementos com classe 'body' */
+.body {
+    background-color: white;
+}
+
+/* Estilos para elementos com classe 'imagem-container' */
+.imagem-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para elementos com classe 'texto-sobre-imagem' */
+.texto-sobre-imagem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: auto;
+    height: auto;
+    align-items: center;
+}
+
+/* Estilos para elementos IMG */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para elementos com classe 'texto' */
+.texto {
+    text-align: center;
+    font-size: 18.72px;
+    font-weight: bold;
+}
+
+/* Estilos para elementos com classe 'minha-classe' */
+.minha-classe {
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 64px;
+    font-family: 'Gloock', serif;
+    font-weight: 100;
+}
+
+/* Estilos para elementos com classe 'margin' */
+.margin {
+    margin: 0;
+    font-weight: 100;
+}
+
+/* Estilos para elementos com classe 'imagem-circulo' */
+.imagem-circulo {
+    left: 15%;
+}
+
+/* Estilos para elementos com classe 'slideshow-container' */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para elementos com classe 'slide' */
+.slide {
+    display: none;
+}
+
+/* Estilos para imagens dentro de elementos com classe 'slide' */
+.slide img {
+    width: 100%;
+    height: 200px;
+}
+
+/* Estilos para setas de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Estilos para elementos com classe 'dots' */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para elementos com classe 'dot' */
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #333;
+}
+
+/* Estilos para elementos com classe 'texto-2' */
+.texto-2 {
+    color: white;
+}
+
+/* Estilos para elementos com classe 'sub-titulo' */
+.sub-titulo {
+    text-align: center;
+}
+
+/* Estilos para elementos com classe 'outro-text' */
+.outro-text {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(131, 68, 23);
+}
+
+/* Estilos para elementos com classe 'img-responsivo' */
+.img-responsivo {
+    width: 65%;
+    height: auto;
+}
+
+/* Estilos para dispositivos com largura mínima de 720px */
+@media (min-width: 720px) {
+    .minha-classe {
+        font-size: 10px;
+    }
+}

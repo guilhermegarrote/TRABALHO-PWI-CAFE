@@ -1,13 +1,46 @@
+/* Reset de estilos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis globais */
+:root {
+    --color-dark1: #272727;
+    --color-dark2: #363636;
+    --color-dark3: #414141;
+    --color-dark4: #2b2b2b;
+    --color-dark5: #343434;
+    --color-coffe-menta: #99CC66;
+    --color-coffe-chocolate: #936037;
+    --color-coffe-baunilha: #FBD877;
+    --color-coffe-colab: #FAF1CA;
+    --color-white: rgb(228, 228, 228);
+    --color-background-caramel: #CA9E67;
+    --color-background-chocolate: #683C11;
+    --color-background-morango: #FFADAD;
+    --color-background-balnilha: #FBD877;
+    --color-background-menta: #99CC66;
+    --color-background-frappe: #;
+}
+
+/* Estilos gerais para HTML e BODY */
 html, body {
     height: 100%;
 }
 
 body {
     background-color: var(--color-dark1);
-    color: var(--color-second);
+    color: var(--color-white);
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
+/* Header */
 .header, .navigation_header {
     align-items: center;
     display: flex;
@@ -22,7 +55,7 @@ body {
     min-height: 65px;
     justify-content: space-between;
     padding: 0 10%;
-    width: 100vw;
+    width: 100%;
 }
 
 .navigation_header {
@@ -30,7 +63,7 @@ body {
 }
 
 .navigation_header a {
-    color: var(--color-purple);
+    color: var(--color-white);
     font-weight: bold;
     text-decoration: none;
     transition: 1s;
@@ -39,12 +72,239 @@ body {
 .btn_icon_header {
     background-color: transparent;
     border: none;
-    color: var(--color-second);
+    color: var(--color-white);
     cursor: pointer;
     display: none;
 }
 
-@media screen and (max-width: 820px) {
+
+/* Keyframes para a animação showSidebar */
+@keyframes showSidebar {
+    from {
+        margin-left: -100vw;
+    }
+
+    to {
+        margin-left: -8vh;
+    }
+}
+
+
+/* Logo */
+.logo {
+    align-items: center;
+    display: flex;
+    padding-left: 50px;
+}
+
+.img_logo_header {
+    width: 3.5vw;
+    min-width: 35px;
+}
+
+/* Estilos para elementos com classe 'wrapper' */
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+/* Estilos para elementos de slides */
+.slide-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.slide-list {
+    width: 100vw;
+    display: flex;
+}
+
+.slide-item {
+    cursor: grab;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 45vw;
+}
+
+.slide-content {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 45vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.colab {
+    align-items: center;
+    justify-content: center;
+}
+
+.colab .slide-image {
+    margin-left: 0%;
+    position: absolute;
+    width: 70vw;
+    height: 55vw;
+}
+
+.colab .slide-color {
+    width: 100vw;
+    height: 100%;
+}
+
+.slide-color-colab {
+    background-color: var(--color-coffe-colab);
+}
+
+.slide-description {
+    color: #fff;
+    margin-left: 8%;
+    width: 88%;
+}
+
+.slide-description h3 {
+    font-family: "quicksand", sans-serif;
+    font-size: 52px;
+}
+
+.slide-image {
+    margin-left: 25.5%;
+    position: absolute;
+    width: 50vw;
+    height: 40vw;
+}
+
+.slide-color {
+    width: 60vw;
+    height: 100%;
+}
+
+.slide-color-1 {
+    background-color: var(--color-coffe-menta);
+}
+
+.slide-color-2 {
+    background-color: var(--color-coffe-chocolate);
+}
+
+.slide-color-3 {
+    background-color: var(--color-coffe-baunilha);
+}
+
+/* Estilos para elementos de navegação dos slides */
+.slide-nav-button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+}
+
+.slide-nav-previous {
+    left: 20px;
+}
+
+.slide-nav-next {
+    right: 20px;
+}
+
+.produto-lista {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 8vw;
+}
+
+.produto-card {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 9%;
+    margin-top: 8%;
+    justify-content: center;
+    align-items: center;
+    width: calc((100vw / 5) - 20px);
+    height: 27.5vw;
+    margin: 0.5%
+}
+
+.produto-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8%;
+}
+
+.produto-content-caramel {
+    background-color: var(--color-background-caramel);
+}
+
+.produto-content-chocolate {
+    background-color: var(--color-background-chocolate);
+}
+
+.produto-content-morango {
+    background-color: var(--color-background-morango);
+}
+
+.produto-content-balnilha {
+    background-color: var(--color-background-balnilha);
+}
+
+.produto-content-menta {
+    background-color: var(--color-background-menta);
+}
+
+.produto-content-frappe {
+    background-color: var(--color-background-frappe);
+}
+
+.produto-content img {
+    min-height: 100px;
+    height: 20vw;
+}
+
+.produto-content h1{
+    margin-top: 10%;
+    font-size: 2.5vw;
+    color: var(--color-white);
+}
+
+.produto-content p{
+    margin-bottom: 10%;
+    font-size: 2.5vw;
+    color: var(--color-white);
+}
+
+.produto-content button {
+    border-radius: 12px;
+    background-color: #15673E;
+    color: var(--color-white);
+    font-size: 2.7vw;
+    height: 4vw;
+    width: 15vw;
+    margin-bottom: 10%;
+}
+
+footer{
+    width: 100%;
+    height: 500px;
+    background-color: var(--color-dark5);
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 725px) {
     .btn_icon_header {
         display: block;
         padding: 1em;
@@ -79,199 +339,72 @@ body {
     .border {
         border-top: 2px solid var(--color-dark1);
     }
-}
 
-@keyframes showSidebar {
-    from {
-        margin-left: -100vw;
+
+    /* Estilos para elementos com classe 'wrapper' */
+    .wrapper {
+        height: 75vw;
     }
 
-    top {
-        margin-left: -8vh;
+    .slide-list {
+        height: 75vw;
     }
-}
 
-.active {
-    background-color: var(--color-dark3);
-    border-radius: 10px;
-    padding: 10px;
-}
+    .slide-content {
+        height: 75vw;
+    }
 
-.logo {
-    align-items: center;
-    display: flex;
-    padding-left: 50px;
-}
 
-.img_logo_header {
-    width: 2vw;
-    min-width: 35px;
-    filter: invert();
-}
+    .colab .slide-image {
+        height: 75vw;
+    }
 
-:root {
-    --color-dark1: #272727;
-    --color-dark2: #363636;
-    --color-dark3: #414141;
-    --color-dark4: #2b2b2b;
-    --color-dark5: #343434;
-    --color-second: rgb(228, 228, 228);
-}
-
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-}
-
-.wrapper {
-    top: px;
-    display: flex;
-    align-items: center;
-    width: 100vw;
-}
-
-.slide-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100vw;
-}
-
-.slide-list {
-    width: 100vw;
-    display: flex;
-}
-
-.slide-item {
-    cursor: grab;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.slide-content {
-    width: 100%;
-    position: relative;
-}
-
-.slide-image {
-    width: 100%;
-    height: 45vw;
-}
-
-.slide-description {
-    color: #fff;
-    position: absolute;
-    bottom: 35%;
-    margin-left: 8%;
-    width: 45%;
-}
-
-.slide-description h3 {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 52px;
-    position: relative;
-}
-
-.slide-description p {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 27px;
-    word-wrap: break-word;
-}
-
-.slide-nav-button {
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    font-size: 36px;
-    position: absolute;
-    z-index: 1;
-}
-
-.slide-nav-previous {
-    left: 20px;
-}
-
-.slide-nav-next {
-    right: 20px;
-}
-
-.slide-controls {
-    position: absolute;
-    top: 103%;
-    /* Ajuste a posição vertical conforme necessário */
-    z-index: 10;
-    left: 45%;
-    right: 45%;
-    /* Centralize verticalmente */
-}
-
-.slide-control-button {
-    background: transparent;
-    bottom: -90px;
-    color: var(--color-second);
-    cursor: pointer;
-    font-size: 22px;
-    padding: 10px;
-}
-
-.active {
-    font-size: 22px;
-    color: var(--color-dark3);
-}
-
-@media screen and (max-width: 768px) {
-    .slide-controls {
-        top: 103%;
-        left: 35%;
-        right: 30%;
+    .slide-color-colab {
+        background-color: var(--color-coffe-colab);
     }
 
     .slide-description {
-        padding: 30px;
-        bottom: 0;
-        width: 100%;
-        margin-bottom: 0%;
-        margin-left: 6%;
+        color: #fff;
+        margin-left: 8%;
+        width: 88%;
     }
 
     .slide-description h3 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: 22px;
-        top: 0;
+        font-size: 5vw;
     }
 
-    .slide-description p {
-        font-family: "Montserrat", Arial, sans-serif;
-        font-size: 10px;
-        max-width: 200px;
-        /* Defina o valor máximo que você deseja */
-        word-wrap: break-word;
+    .slide-image {
+        margin-left: 25.5%;
+        position: absolute;
+        width: 50vw;
+        height: 40vw;
     }
 
+    /* Estilos para elementos de navegação dos slides */
     .slide-nav-button {
         display: none;
     }
-
-    .slide-controls {
-        margin: 0px auto;
+    
+    .produto-card {
+        min-width: 150px;
+        min-height: 140px;
+        margin: 2.5%;
+        margin-bottom: 32px;
     }
 
-    .slide-control-button {
-        color: #fff;
-        cursor: pointer;
-        background: transparent;
-        font-size: 10px;
-        margin: 0 2px;
+    .produto-content h1{
+        font-size: 90%;
+    }
+    
+    .produto-content p{
+        font-size: 90%;
     }
 
-    .slide-control-button.active {
-        color: var(--color-dark3);
+    .produto-content button {
+        font-size: 83%;
+        min-width: 110px;
+        min-height: 20px;
+        height: 4vw;
+        width: 15vw;
     }
 }

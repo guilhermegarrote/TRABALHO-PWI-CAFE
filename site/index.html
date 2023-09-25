@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
     <link rel="stylesheet" href="css/style.css">
-    <title>Projeto</title>
+    <title>Coffe</title>
 </head>
 
 <body>
@@ -20,7 +18,7 @@
             <img src="img/icons/list.svg" alt="Icone lista">
         </button>
         <div class="logo_header">
-            <img src="img/logo.png" class="img_logo_header" alt="Logo">
+            <img src="img/logo.svg" class="img_logo_header" alt="Logo">
         </div>
         <div class="navigation_header" id="navigationHader">
             <button onclick="toggleSidebar()" class="btn_icon_header"><img src="img/icons/x.svg" alt=""></button>
@@ -41,47 +39,93 @@
                 <div class="slide-controls" data-slide="controls-wrapper"></div>
                 <div class="slide-list" data-slide="list">
                     <div class="slide-item" data-slide="item" data-index="0">
-                        <div class="slide-content">
-                            <img class="slide-image" src="img/img_slide1.jpg" alt="Café Expresso" />
-                            <div class="slide-description">
-                                <h3>Café Expresso:</h3>
-                                <h3>Paixão Italiana</h3>
-                                <p>Um toque de paixão italiana em cada xícara. Experimente a verdadeira essência do
-                                    expresso.</p>
-                            </div>
+                        <div class="slide-content colab">
+                            <img class="slide-image" src="img/img_colab.svg" alt="Café Expresso" />
+                            <div class="slide-color slide-color-colab"></div>
                         </div>
                     </div>
                     <div class="slide-item" data-slide="item" data-index="1">
                         <div class="slide-content">
-                            <img class="slide-image" src="img/img_slide2.jpg" alt="Café em Grãos" />
                             <div class="slide-description">
-                                <h3>Café em Grãos:</h3>
-                                <h3>Sabor Personalizado</h3>
-                                <p>Crie o café dos seus sonhos com nossos grãos de qualidade premium. Personalize seu
-                                    sabor a cada xícara.</p>
+                                <h3>cafféé espreço:</h3>
                             </div>
+                            <img class="slide-image" src="img/img_coffe_menta.svg" alt="Café Expresso" />
+                            <div class="slide-color slide-color-1"></div>
                         </div>
                     </div>
                     <div class="slide-item" data-slide="item" data-index="2">
                         <div class="slide-content">
-                            <img class="slide-image" src="img/img_slide3.jpg" alt="Café Artesanal" />
                             <div class="slide-description">
-                                <h3>Café Artesanal: </h3>
-                                <h3>Tradição Moderna</h3>
-                                <p>Uma mistura perfeita de tradição e modernidade. Experimente nosso café artesanal e apaixone-se pelo sabor autêntico.</p>
+                                <h3>cafféé espreço:</h3>
                             </div>
+                            <img class="slide-image" src="img/img_coffe_chocolate.svg" alt="Café Expresso" />
+                            <div class="slide-color slide-color-2"></div>
+                        </div>
+                    </div>
+                    <div class="slide-item" data-slide="item" data-index="3">
+                        <div class="slide-content">
+                            <div class="slide-description">
+                                <h3>cafféé espreço:</h3>
+                            </div>
+                            <img class="slide-image" src="img/img_coffe_baunilha.svg" alt="Café Expresso" />
+                            <div class="slide-color slide-color-3"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="produto-lista">
+            <div class="produto-card produto-content-caramel">
+                <div class="produto-content">
+                    <img src="img/img_coffe_caramel.svg" alt="">
+                    <h1>coffe</h1>
+                    <p>chocolate</p>
+                    <button>saiba+</button>
+                </div>
+            </div>
+            <div class="produto-card produto-content-chocolate">
+                <div class="produto-content">
+                    <img src="img/img_coffe_chocolate.svg" alt="">
+                    <h1>coffe</h1>
+                    <p>chocolate</p>
+                    <button>saiba+</button>
+                </div>
+            </div>
+            <div class="produto-card produto-content-morango">
+                <div class="produto-content">
+                    <img src="img/img_coffe_morango.svg" alt="">
+                    <h1>coffe</h1>
+                    <p>chocolate</p>
+                    <button>saiba+</button>
+                </div>
+            </div>
+            <div class="produto-card produto-content-balnilha">
+                <div class="produto-content">
+                    <img src="img/img_coffe_baunilha.svg" alt="">
+                    <h1>coffe</h1>
+                    <p>chocolate</p>
+                    <button>saiba+</button>
+                </div>
+            </div>
+            <div class="produto-card produto-content-menta">
+                <div class="produto-content">
+                    <img src="img/img_coffe_menta.svg" alt="">
+                    <h1>coffe</h1>
+                    <p>chocolate</p>
+                    <button>saiba+</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+        </footer>
     </div>
+
 </body>
 <script src="js/menu.js"></script>
 <script src="js/slides.js"></script>
 <script>
     initSlider({
-        autoPlay: true,
+        autoPlay: false,
         startAtIndex: 0,
         timeInterval: 3000
     })
