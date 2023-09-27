@@ -10,22 +10,20 @@
 
 /* Variáveis globais */
 :root {
-    --color-dark1: #272727;
-    --color-dark2: #363636;
-    --color-dark3: #414141;
-    --color-dark4: #2b2b2b;
-    --color-dark5: #343434;
+    --color-dark1: #2b2b2b;
+    --color-dark2: #303030;
+    --color-dark3: #3a3a3a;
+    --color-light1: #dcdcdc;
+    --color-light2: rgb(240, 231, 195);
     --color-coffe-menta: #99CC66;
     --color-coffe-chocolate: #936037;
     --color-coffe-baunilha: #FBD877;
-    --color-coffe-colab: #FAF1CA;
-    --color-white: rgb(228, 228, 228);
+    --color-coffe-colab: #ebe0b4;
     --color-background-caramel: #CA9E67;
     --color-background-chocolate: #683C11;
     --color-background-morango: #FFADAD;
     --color-background-balnilha: #FBD877;
     --color-background-menta: #99CC66;
-    --color-background-frappe: #;
 }
 
 /* Estilos gerais para HTML e BODY */
@@ -34,13 +32,12 @@ html, body {
 }
 
 body {
-    background-color: var(--color-dark1);
-    color: var(--color-white);
+    background-color: var(--color-light2);
+    color: var(--color-dark2);
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
-/* Header */
 .header, .navigation_header {
     align-items: center;
     display: flex;
@@ -49,9 +46,9 @@ body {
 }
 
 .header {
-    background-color: var(--color-dark2);
-    box-shadow: 0px 0px 10px var(--color-dark4);
-    height: 6vw;
+    background-color: var(--color-dark1);
+    box-shadow: 0px 0px 10px var(--color-dark2);
+    height: 6vw;  
     min-height: 65px;
     justify-content: space-between;
     padding: 0 10%;
@@ -62,17 +59,21 @@ body {
     gap: 6em;
 }
 
+.no-overflow {
+    overflow: hidden;
+}
+
 .navigation_header a {
-    color: var(--color-white);
+    color: var(--color-light1);
     font-weight: bold;
     text-decoration: none;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .btn_icon_header {
     background-color: transparent;
     border: none;
-    color: var(--color-white);
+    color: var(--color-light1);
     cursor: pointer;
     display: none;
 }
@@ -131,6 +132,7 @@ body {
 }
 
 .slide-content {
+    background-color: var(--color-coffe-colab);
     position: relative;
     display: flex;
     width: 100vw;
@@ -161,7 +163,7 @@ body {
 }
 
 .slide-description {
-    color: #fff;
+    color: var(--color-dark1);
     margin-left: 8%;
     width: 88%;
 }
@@ -198,7 +200,7 @@ body {
 /* Estilos para elementos de navegação dos slides */
 .slide-nav-button {
     background: transparent;
-    color: #fff;
+    color: var(--color-dark1);
     cursor: pointer;
     font-size: 36px;
     position: absolute;
@@ -222,7 +224,7 @@ body {
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 8vw;
+    margin-top: 11vw;
 }
 
 .produto-card {
@@ -275,32 +277,45 @@ body {
     height: 20vw;
 }
 
-.produto-content h1{
+.produto-content h1 {
     margin-top: 10%;
     font-size: 2.5vw;
-    color: var(--color-white);
+    font-family: "quicksand", sans-serif;
+    color: var(--color-light1);
 }
 
-.produto-content p{
+.produto-content p {
     margin-bottom: 10%;
     font-size: 2.5vw;
-    color: var(--color-white);
+    font-family: "quicksand", sans-serif;
+    color: var(--color-light1);
 }
 
 .produto-content button {
     border-radius: 12px;
     background-color: #15673E;
-    color: var(--color-white);
+    color: var(--color-light1);
+    font-family: "quicksand", sans-serif;
+    font-weight: bold;
     font-size: 2.7vw;
     height: 4vw;
     width: 15vw;
     margin-bottom: 10%;
 }
 
-footer{
+.novo-sabor{
+    display: flex;
+    margin-top: 15px;
+}
+
+.novo-sabor img{
+    width: 100vw;
+}
+
+footer {
     width: 100%;
     height: 500px;
-    background-color: var(--color-dark5);
+    background-color: var(--color-dark1);
 }
 
 /* Estilos para dispositivos móveis */
@@ -311,19 +326,18 @@ footer{
     }
 
     .navigation_header {
-        animation-duration: 1s;
-        background-color: var(--color-dark5);
+        background-color: var(--color-dark2);
         flex-direction: column;
         gap: 0;
-        height: 150%;
-        margin-left: -100vw;
+        height: 100%;
+        margin-left: 10vw;
         position: absolute;
         top: 0;
-        width: 50vw;
+        min-width: 60vw;
+        animation-duration: 0.5s;
     }
 
     .itens_header {
-        align-items: center;
         border-bottom: 2px solid var(--color-dark1);
         display: flex;
         justify-content: center;
@@ -333,7 +347,7 @@ footer{
 
     .itens_header:hover {
         background-color: var(--color-dark4);
-        border: 2px solid var(--color-dark3);
+        border: 2px solid var(--color-dark5);
     }
 
     .border {
@@ -384,7 +398,7 @@ footer{
     .slide-nav-button {
         display: none;
     }
-    
+
     .produto-card {
         min-width: 150px;
         min-height: 140px;
@@ -392,11 +406,11 @@ footer{
         margin-bottom: 32px;
     }
 
-    .produto-content h1{
+    .produto-content h1 {
         font-size: 90%;
     }
-    
-    .produto-content p{
+
+    .produto-content p {
         font-size: 90%;
     }
 

@@ -9,10 +9,13 @@ function toggleSidebar() {
         navigationHader.style.marginLeft = '-8vh';
         navigationHader.style.animationName = 'showSidebar';
         content.style.filter = 'blur(4px)';
+        document.body.classList.add("no-overflow");
     } else {
         navigationHader.style.marginLeft = '-100vh';
         navigationHader.style.animationName = '';
         content.style.filter = 'blur(0px)';
+        document.body.style.overflowX = "";
+        document.body.classList.remove("no-overflow");
     }
 }
 
