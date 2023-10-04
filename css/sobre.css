@@ -27,51 +27,39 @@
     border-radius: 25px;
 }
 
-/* Estilos para elementos com classe 'texto-sobre-imagem' */
-.texto-sobre-imagem {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    width: auto;
-    height: auto;
+.sub-titulo {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-/* Estilos para elementos IMG */
-img {
-    width: 100%;
-    height: auto;
+
+.sub-titulo-name{
+    width: 40vw;
+    border-radius: 15px;
+    background-color: var(--color-dark1);
+    color: var(--color-light2);
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3% 0;
 }
 
-/* Estilos para elementos com classe 'texto' */
-.texto {
-    text-align: center;
-    font-size: 18.72px;
-    font-weight: bold;
-}
-
-/* Estilos para elementos com classe 'margin' */
-.margin {
-    margin: 0;
-    font-weight: 100;
-}
-
-/* Estilos para elementos com classe 'imagem-circulo' */
-.imagem-circulo {
-    left: 15%;
+.sub-titulo-name h1{
+    padding: 2%;
 }
 
 /* Estilos para elementos com classe 'slideshow-container' */
 .slideshow-container {
+    margin-top: 2.5%;
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 80vw;
 }
 
 /* Estilos para elementos com classe 'slide' */
 .slide {
+    font-size: 2vw;
     text-align: center;
 }
 
@@ -81,27 +69,11 @@ img {
     height: 200px;
 }
 
-/* Estilos para setas de navegação */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
 /* Estilos para elementos com classe 'dots' */
 .dots {
     text-align: center;
     margin-top: 20px;
+
 }
 
 /* Estilos para elementos com classe 'dot' */
@@ -110,33 +82,56 @@ img {
     width: 12px;
     height: 12px;
     margin: 0 8px;
-    background-color: var(--color-dark3);
+    background-color: rgb(126, 126, 126);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .active {
-    background-color: rgb(126, 126, 126);
+    background-color: var(--color-dark3);
 }
 
-
-/* Estilos para elementos com classe 'sub-titulo' */
-.sub-titulo {
-    text-align: center;
-    text-align: justify;
-}
-
-
-.text-politica-gestao{
+.text{
     align-items: center;
-    background-color: var(--color-coffe-colab);
+    text-align: justify;
     padding: 2.5%;
     margin: 2.5%;
+    background-color: var(--color-coffe-colab);
+    font-size: 1vw;
+}
+
+.content-equipe{
+    display: flex;
+    flex-direction: row;
+}
+
+.content-equipe img{
+    width: 30vw;
+    margin-left: 5vw;
+}
+
+.content-equipe p{
+    width: 47vw;
 }
 
 /* Estilos para dispositivos com largura mínima de 720px */
-@media (min-width: 720px) {
-    .minha-classe {
-        font-size: 10px;
+@media screen and (max-width: 725px) {
+    .text{
+        font-size: 2.3vw;
+    }
+
+    .content-equipe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content-equipe img{
+        width: 38vw;
+        margin-left: 0vw;
+    }
+    
+    .content-equipe p{
+        width: 47vw;
     }
 }

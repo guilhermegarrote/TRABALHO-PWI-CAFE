@@ -25,82 +25,123 @@
             <button onclick="toggleSidebar()" class="btn_icon_header"><img src="img/icons/x.svg" alt=""></button>
             <div class="itens_header border"><a href="index.html">HOME</a></div>
             <div class="itens_header"><a href="sobre.html">EMPRESA</a></div>
-            <div class="itens_header"><a href="sobre.html">EQUIPE</a></div>
-            <div class="itens_header"><a href="index.html">CONTATO</a></div>
+            <div class="itens_header"><a href="sobre.html#equipe">EQUIPE</a></div>
+            <div class="itens_header"><a href="#contato">CONTATO</a></div>
         </div>
     </div>
 
-    <div>
+    <div tabindex="0" onclick="closeSidebar()" class="content" id="content">
         <div class="titulo">
             <img src="img/sobre/img_todos_sabores.svg" alt="imagem responsiva">
             <div>
                 <h1>coffee</h1>
             </div>
         </div>
-        
-        <div class="texto">
-            <h1 class="texto-2">
-                NOSSOS VALORES
-            </h1>
+
+        <div class="sub-titulo">
+            <div class="sub-titulo-name">
+                <h1>Empresa</h1>
+            </div>
+            
+            <h1>NOSSOS VALORES</h1>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <h1>Simplicidade e Sinceridade</h1>
+                    <h2>Clareza, simplicidade e sinceridade nas relações</h2>
+                </div>
+                <div class="slide fade">
+                    <h1>Perseverança com Agilidade</h1>
+                    <h2>Garantir que as coisas aconteças com seguranças e agilidade e ir até o fim</h2>
+                </div>
+                <div class="slide fade">
+                    <h1>Inovação</h1>
+                    <h2>Ousadia e inovção na criação de oportunidade</h2>
+                </div>
+                <div class="slide fade">
+                    <h1>Paixão</h1>
+                    <h2>Entusiasmo e paixão em tudo que faz</h2>
+                </div>
+                <div class="slide fade">
+                    <h1>Cuidado</h1>
+                    <h2>Responsabilidade e cuidado em todas as atitudes</h2>
+                </div>
+                <div class="slide fade">
+                    <h1>Responsabilidade Socioambiental</h1>
+                    <h2>Contribuir para o desenvolvimento da comunidade e preservação do meio ambiente</h2>
+                </div>
+                <div class="slide fade">
+                    <h1>Empreendedorismo</h1>
+                    <h2>Ter senso de dono fazer sempre mais e melhor</h2>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="selecionarSlide(1)"></span>
+                <span class="dot" onclick="selecionarSlide(2)"></span>
+                <span class="dot" onclick="selecionarSlide(3)"></span>
+                <span class="dot" onclick="selecionarSlide(4)"></span>
+                <span class="dot" onclick="selecionarSlide(5)"></span>
+                <span class="dot" onclick="selecionarSlide(6)"></span>
+            </div>
+            <div class="text">
+                <h1>Política de Gestão</h1>
+                <h2>Satisfazer consumidores e clientes com produtos e serviços de qualidade, através da
+                    contínua melhoria, da inovação e do fortalecimento dos laços estabelecidos com nossos públicos de
+                    relacionamento, visando o crescimento sustentável, por meio do (a):
+                    <li>Garantia de qualidade e segurança dos alimentos;</li>
+                    <li>Atendimento aos requisitos legais e outros, aplicáveis ao negócio e partes interessadas;</li>
+                    <li>Desenvolvimento das pessoas de acordo com a nossa essência e cultura;</li>
+                    <li>Implementação e aplicação de processos que promovam a saúde e segurança das pessoas, a proteção
+                        ambiental e a prevenção à poluição;</li>
+                    <li>Inovação através de seus processos, produtos e serviços;</li>
+                    <li>Continua melhoria do Sistema de Gestão para alcançar os resultados pretendidos;</li>
+                    <li>Avaliação de oportunidades e riscos para subsidiar a aplicação de boas práticas nas suas
+                        operações.
+                    </li>
+                </h2>
+            </div>
         </div>
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <h1>Simplicidade e Sinceridade</h1>
-                <h2>Clareza, simplicidade e sinceridade nas relações</h2>
+
+        <div class="sub-titulo" id="equipe">
+            <div class="sub-titulo-name">
+                <h1>Equipe</h1>
             </div>
-            <div class="slide fade">
-                <h1>Perseverança com Agilidade</h1>
-                <h2>Garantir que as coisas aconteças com seguranças e agilidade e ir até o fim</h2>
-            </div>
-            <div class="slide fade">
-                <h1>Inovação</h1>
-                <h2>Ousadia e inovção na criação de oportunidade</h2>
-            </div>
-            <div class="slide fade">
-                <h1>Paixão</h1>
-                <h2>Entusiasmo e paixão em tudo que faz</h2>
-            </div>
-            <div class="slide fade">
-                <h1>Cuidado</h1>
-                <h2>Responsabilidade e cuidado em todas as atitudes</h2>
-            </div>
-            <div class="slide fade">
-                <h1>Responsabilidade Socioambiental</h1>
-                <h2>Contribuir para o desenvolvimento da comunidade e preservação do meio ambiente</h2>
-            </div>
-            <div class="slide fade">
-                <h1>Empreendedorismo</h1>
-                <h2>Ter senso de dono fazer sempre mais e melhor</h2>
+            
+            <div class="content-equipe">
+                <img src="img/sobre/img_equipe.svg" alt="">
+                <div class="text">
+                    <h2>Somos uma equipe comprometida com a excelência. Buscamos satisfazer nossos clientes com produtos de qualidade, atendendo rigorosamente aos requisitos legais. Nosso foco na segurança alimentar e na sustentabilidade molda nossas ações diárias. Inovação e melhoria contínua são nossa marca registrada, enquanto avaliamos oportunidades e riscos para crescer de forma responsável. Junte-se a nós nessa jornada de sucesso!</h2>
+                </div>
             </div>
         </div>
-        <div class="dots">
-            <span class="dot" onclick="selecionarSlide(1)"></span>
-            <span class="dot" onclick="selecionarSlide(2)"></span>
-            <span class="dot" onclick="selecionarSlide(3)"></span>
-            <span class="dot" onclick="selecionarSlide(4)"></span>
-            <span class="dot" onclick="selecionarSlide(5)"></span>
-            <span class="dot" onclick="selecionarSlide(6)"></span>
-        </div>
-        <div class="text-politica-gestao">
-            <h1>Política de Gestão</h1>
-            <h2>Satisfazer consumidores e clientes com produtos e serviços de qualidade, através da
-                contínua melhoria, da inovação e do fortalecimento dos laços estabelecidos com nossos públicos de
-                relacionamento, visando o crescimento sustentável, por meio do (a):
-                <li>Garantia de qualidade e segurança dos alimentos;</li>
-                <li>Atendimento aos requisitos legais e outros, aplicáveis ao negócio e partes interessadas;</li>
-                <li>Desenvolvimento das pessoas de acordo com a nossa essência e cultura;</li>
-                <li>Implementação e aplicação de processos que promovam a saúde e segurança das pessoas, a proteção
-                    ambiental e a prevenção à poluição;</li>
-                <li>Inovação através de seus processos, produtos e serviços;</li>
-                <li>Continua melhoria do Sistema de Gestão para alcançar os resultados pretendidos;</li>
-                <li>Avaliação de oportunidades e riscos para subsidiar a aplicação de boas práticas nas suas operações.
-                </li>
-            </h2>
-        </div>
+
+        <footer id="contato">
+            <img class="footer-fundo" src="img/img_fundo_footer.svg" alt="">
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div style="margin-left: 2%; display: block;">
+                    <img style="width: 15vw; margin: 8%; margin-top: 15%;" src="img/img_logotipo.svg" alt="">
+                    <div class="contato-lista">
+                        <div>
+                            <img src="img/icons/img_whatsapp.svg" alt="">
+                            <h1>(99)999.9999</h1>
+                        </div>
+                        <div>
+                            <img src="img/icons/img_youtube.svg" alt="">
+                            <h1>@COFFEE</h1>
+                        </div>
+                        <div>
+                            <img src="img/icons/img_instagram.svg" alt="">
+                            <h1>@COFFEE</h1>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-right: 10vw; margin-top: 10%; display: flex; flex-direction: column; align-items: center;">
+                    <h1 style="color: var(--color-light1); font-size: 4vw;">Fique atualizado!</h1>
+                    <input class="input-email" type="email" name="email" placeholder="Seu endereço de email" required>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <div></div>
-
+    <script src="js/menu.js"></script>
     <script src="js/slideSobre.js"></script>
 </body>
 
